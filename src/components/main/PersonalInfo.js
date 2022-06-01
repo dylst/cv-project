@@ -7,6 +7,9 @@ const PersonalInfo = (props) => {
   const lastNameChange = (e) => {
     props.onLastNameChange(e.target.value);
   };
+  const titleChangeHandler = (e) => {
+    props.onTitleChange(e.target.value);
+  };
 
   return (
     <label>
@@ -26,7 +29,12 @@ const PersonalInfo = (props) => {
         onChange={lastNameChange}
       />
       <br />
-      <input type="text" name="title" placeholder="Title" />
+      <input
+        type="text"
+        name="title"
+        placeholder="Title"
+        onChange={titleChangeHandler}
+      />
       <br />
       <input type="text" name="address" placeholder="Address" />
       <br />

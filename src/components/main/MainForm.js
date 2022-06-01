@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
 import PersonalInfo from "./PersonalInfo";
 import Experience from "./Experience";
 import Education from "./Education";
 
-const MainForm = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const firstNameChange = (val) => {
-    setFirstName(val);
+const MainForm = (props) => {
+  const firstNameChange = (name) => {
+    props.updateFirstName(name);
   };
-  const lastNameChange = (val) => {
-    setLastName(val);
+  const lastNameChange = (name) => {
+    props.updateLastName(name);
+  };
+  const titleChange = (el) => {
+    props.updateTitle(el);
   };
 
   return (
@@ -19,12 +20,10 @@ const MainForm = () => {
       <PersonalInfo
         onFirstNameChange={firstNameChange}
         onLastNameChange={lastNameChange}
+        onTitleChange={titleChange}
       />
       <Experience />
       <Education />
-      <div>
-        {firstName} {lastName}
-      </div>
     </form>
   );
 };
