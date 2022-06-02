@@ -10,6 +10,15 @@ const PersonalInfo = (props) => {
   const titleChangeHandler = (e) => {
     props.onTitleChange(e.target.value);
   };
+  const addressChangeHandler = (e) => {
+    props.onAddressChange(e.target.value);
+  };
+  const phoneNumberChangeHandler = (e) => {
+    props.onPhoneNumberChange(e.target.value);
+  };
+  const emailChangeHandler = (e) => {
+    props.onEmailChange(e.target.value);
+  };
 
   return (
     <label>
@@ -36,11 +45,26 @@ const PersonalInfo = (props) => {
         onChange={titleChangeHandler}
       />
       <br />
-      <input type="text" name="address" placeholder="Address" />
+      <input
+        type="text"
+        name="address"
+        placeholder="Address"
+        onChange={addressChangeHandler}
+      />
       <br />
-      <input type="text" name="phoneNumber" placeholder="Phone number" />
+      <input
+        type="text"
+        name="phoneNumber"
+        placeholder="Phone number"
+        onChange={phoneNumberChangeHandler}
+      />
       <br />
-      <input type="text" name="email" placeholder="Email" />
+      <input
+        type="text"
+        name="email"
+        placeholder="Email"
+        onChange={emailChangeHandler}
+      />
       <br />
       <input type="text" name="description" placeholder="Description" />
       <br />

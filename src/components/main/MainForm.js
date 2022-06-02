@@ -14,6 +14,15 @@ const MainForm = (props) => {
   const titleChange = (el) => {
     props.updateTitle(el);
   };
+  const addressChange = (el) => {
+    props.updateAddress(el);
+  };
+  const phoneNumberChange = (el) => {
+    props.updatePhoneNumber(el);
+  };
+  const emailChange = (el) => {
+    props.updateEmail(el);
+  };
 
   return (
     <form>
@@ -21,6 +30,9 @@ const MainForm = (props) => {
         onFirstNameChange={firstNameChange}
         onLastNameChange={lastNameChange}
         onTitleChange={titleChange}
+        onAddressChange={addressChange}
+        onPhoneNumberChange={phoneNumberChange}
+        onEmailChange={emailChange}
       />
       <Experience />
       <Education />
