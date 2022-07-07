@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
 
-import PersonalInfo from "./PersonalInfo";
-import Experience from "./Experience";
-import Education from "./Education";
+import PersonalInfo from './PersonalInfo';
+import Experience from './Experience';
+import Education from './Education';
 
 const MainForm = (props) => {
   const firstNameChange = (name) => {
@@ -25,19 +26,30 @@ const MainForm = (props) => {
   };
 
   return (
-    <form>
-      <PersonalInfo
-        onFirstNameChange={firstNameChange}
-        onLastNameChange={lastNameChange}
-        onTitleChange={titleChange}
-        onAddressChange={addressChange}
-        onPhoneNumberChange={phoneNumberChange}
-        onEmailChange={emailChange}
-      />
-      <Experience />
-      <Education />
-    </form>
+    <FormWrapper>
+      <form>
+        <PersonalInfo
+          onFirstNameChange={firstNameChange}
+          onLastNameChange={lastNameChange}
+          onTitleChange={titleChange}
+          onAddressChange={addressChange}
+          onPhoneNumberChange={phoneNumberChange}
+          onEmailChange={emailChange}
+        />
+        <Experience />
+        <Education />
+      </form>
+    </FormWrapper>
   );
 };
 
 export default MainForm;
+
+const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #307692;
+  margin: 0px;
+`;

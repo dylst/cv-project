@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import MainForm from "./components/main/MainForm";
-import PreviewFrom from "./components/preview/PreviewForm";
+import Header from './components/Header';
+import MainForm from './components/main/MainForm';
+import PreviewFrom from './components/preview/PreviewForm';
 
 function App() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [title, setTitle] = useState("");
-  const [address, setAddress] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [title, setTitle] = useState('');
+  const [address, setAddress] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
 
   const updateFirstName = (name) => {
     setFirstName(name);
@@ -31,6 +32,7 @@ function App() {
   };
   return (
     <div>
+      <Header />
       <MainForm
         updateFirstName={updateFirstName}
         updateLastName={updateLastName}

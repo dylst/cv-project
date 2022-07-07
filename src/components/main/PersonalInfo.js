@@ -1,4 +1,7 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
+
+import InfoWrapper from './InfoWrapper';
 
 const PersonalInfo = (props) => {
   const firstNameChange = (e) => {
@@ -21,55 +24,63 @@ const PersonalInfo = (props) => {
   };
 
   return (
-    <label>
-      Personal Information:
-      <br />
-      <input
-        type="text"
-        name="firstName"
-        placeholder="First name"
+    <InfoWrapper>
+      <h3 style={{ color: '#fffaff', fontSize: '1.5rem' }}>
+        Personal Information:
+      </h3>
+      <Input
+        type='text'
+        name='firstName'
+        placeholder='First name'
         onChange={firstNameChange}
       />
-      <br />
-      <input
-        type="text"
-        name="lastName"
-        placeholder="Last name"
+      <Input
+        type='text'
+        name='lastName'
+        placeholder='Last name'
         onChange={lastNameChange}
       />
-      <br />
-      <input
-        type="text"
-        name="title"
-        placeholder="Title"
+      <Input
+        type='text'
+        name='title'
+        placeholder='Title'
         onChange={titleChangeHandler}
       />
-      <br />
-      <input
-        type="text"
-        name="address"
-        placeholder="Address"
+      <Input
+        type='text'
+        name='address'
+        placeholder='Address'
         onChange={addressChangeHandler}
       />
-      <br />
-      <input
-        type="text"
-        name="phoneNumber"
-        placeholder="Phone number"
+      <Input
+        type='text'
+        name='phoneNumber'
+        placeholder='Phone number'
         onChange={phoneNumberChangeHandler}
       />
-      <br />
-      <input
-        type="text"
-        name="email"
-        placeholder="Email"
+      <Input
+        type='text'
+        name='email'
+        placeholder='Email'
         onChange={emailChangeHandler}
       />
-      <br />
-      <input type="text" name="description" placeholder="Description" />
-      <br />
-    </label>
+      <Input type='text' name='description' placeholder='Description' />
+    </InfoWrapper>
   );
 };
 
 export default PersonalInfo;
+
+const Input = styled.input`
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.5s;
+  &:hover {
+    box-shadow: 0 0 10px rgba(16, 16, 16, 1);
+  }
+`;
