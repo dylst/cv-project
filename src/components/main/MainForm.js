@@ -52,4 +52,5 @@ const FormWrapper = styled.div`
   align-items: center;
   background: #307692;
   margin: 0px;
+  padding: 1rem;
 `;

@@ -15,4 +15,6 @@ const Heading = styled.div`
   color: #fd7c64;
   font-size: 3rem;
   padding: 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
 `;

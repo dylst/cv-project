@@ -1,17 +1,34 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
 
 const Sidebar = (props) => {
   return (
-    <div>
-      <h3>Personal Details</h3>
-      <h3>Address</h3>
+    <Container>
+      <h3
+        style={{
+          color: '#305364',
+          borderBottom: '1px solid #c1c1c1',
+          marginBottom: 0,
+        }}
+      >
+        Personal Details
+      </h3>
+      <h4>Address</h4>
       {props.address}
-      <h3>Phone number</h3>
+      <h4>Phone number</h4>
       {props.phoneNumber}
-      <h3>Email</h3>
+      <h4>Email</h4>
       {props.email}
-    </div>
+    </Container>
   );
 };
 
 export default Sidebar;
+
+const Container = styled.div`
+  background: #e7e7e7;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
