@@ -14,7 +14,11 @@ const PreviewForm = (props) => {
         title={props.title}
       />
       <Content>
-        <Main />
+        <Main
+          description={props.description}
+          experience={props.experience}
+          education={props.education}
+        />
         <Sidebar
           address={props.address}
           phoneNumber={props.phoneNumber}

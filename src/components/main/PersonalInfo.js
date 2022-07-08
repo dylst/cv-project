@@ -22,6 +22,9 @@ const PersonalInfo = (props) => {
   const emailChangeHandler = (e) => {
     props.onEmailChange(e.target.value);
   };
+  const descriptionChangedHandler = (e) => {
+    props.onDescriptionChange(e.target.value);
+  };
 
   return (
     <InfoWrapper>
@@ -64,7 +67,12 @@ const PersonalInfo = (props) => {
         placeholder='Email'
         onChange={emailChangeHandler}
       />
-      <Input type='text' name='description' placeholder='Description' />
+      <Input
+        type='text'
+        name='description'
+        placeholder='Description'
+        onChange={descriptionChangedHandler}
+      />
     </InfoWrapper>
   );
 };

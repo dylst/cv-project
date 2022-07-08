@@ -24,6 +24,16 @@ const MainForm = (props) => {
   const emailChange = (el) => {
     props.updateEmail(el);
   };
+  const descriptionChange = (el) => {
+    props.updateDescription(el);
+  };
+  const experienceChange = (key, val) => {
+    props.updateExperience(key, val);
+  };
+
+  const educationChange = (key, val) => {
+    props.updateEducation(key, val);
+  };
 
   return (
     <FormWrapper>
@@ -35,9 +45,10 @@ const MainForm = (props) => {
           onAddressChange={addressChange}
           onPhoneNumberChange={phoneNumberChange}
           onEmailChange={emailChange}
+          onDescriptionChange={descriptionChange}
         />
-        <Experience />
-        <Education />
+        <Experience onExperienceChange={experienceChange} />
+        <Education onEducationChange={educationChange} />
       </form>
     </FormWrapper>
   );
